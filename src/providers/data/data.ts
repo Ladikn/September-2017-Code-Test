@@ -7,7 +7,7 @@ export class DataProvider {
   constructor() {
   }
 
-  //This provider is what would normally querry the server api for the information.  However, only dummy information is being provided
+  //This provider is what would normally query the server api for the information.  However, only dummy information is being provided.  This can be expanded on indefinately.
 
   data: object = 
   {
@@ -56,7 +56,7 @@ export class DataProvider {
       }
     ]
   }
-
+  
   getData(): object {
     return this.data;
   }

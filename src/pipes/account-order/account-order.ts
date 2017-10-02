@@ -1,6 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import * as _ from "lodash";
 
+//Pipe applied to the list of accounts loop to handle sorting via account number or available funds
 @Pipe({
   name: 'accountOrder',
 })

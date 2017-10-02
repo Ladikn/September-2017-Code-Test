@@ -23,6 +23,8 @@ export class HomePage {
   accountArrow: string;
   cashArrow: string;
 
+  //Reminder for sorting: 1 and 2 are for by account (ascending and descending), 3 and 4 are for by available funds (ascending and descending)
+
   accountSort() {
     if (this.sorter == 1) {
         this.sorter = 2;

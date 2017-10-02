@@ -64,6 +64,7 @@ var HomePage = (function () {
         this.viewText = 'View More';
         this.accountArrow = '˄';
     }
+    //Reminder for sorting: 1 and 2 are for by account (ascending and descending), 3 and 4 are for by available funds (ascending and descending)
     HomePage.prototype.accountSort = function () {
         if (this.sorter == 1) {
             this.sorter = 2;
@@ -129,7 +130,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var DataProvider = (function () {
     function DataProvider() {
-        //This provider is what would normally querry the server api for the information.  However, only dummy information is being provided
+        //This provider is what would normally query the server api for the information.  However, only dummy information is being provided.  This can be expanded on indefinately.
         this.data = {
             "accounts": [
                 {
@@ -280,6 +281,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 
 
+//Pipe applied to the list of accounts loop to handle sorting via account number or available funds
 var AccountOrderPipe = (function () {
     function AccountOrderPipe() {
     }
@@ -328,12 +330,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-/**
- * Generated class for the AccountComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
 var AccountComponent = (function () {
     function AccountComponent() {
     }
@@ -341,9 +337,6 @@ var AccountComponent = (function () {
         this.difference = this.today - this.yesterday;
         this.percentage = 1 - (this.today / this.yesterday);
         this.setColor();
-        console.log(this.name);
-        // console.log(this.difference);
-        console.log(this.percentage);
     };
     AccountComponent.prototype.setColor = function () {
         if (this.percentage > 0) {
@@ -387,7 +380,7 @@ __decorate([
 ], AccountComponent.prototype, "i", void 0);
 AccountComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'account',template:/*ion-inline-start:"C:\Users\Ladikn\Documents\Code\Ionic\SepTest\SepTest\src\components\account\account.html"*/'<!-- Generated template for the AccountComponent component -->\n<div class=\'list-item\' ion-item *ngIf=\'i < 3 || viewMore\'>\n  <span class=\'account\'>{{name}} - {{accountNumber}}</span>\n  <span class=\'balance\'>{{today | currency: \'USD\':true:\'3.2-2\'}} <br/>\n  <span [style.color]="color">{{positive}}{{percentage | percent:\'1.2-2\'}}</span></span>\n  <!-- {{name}} - {{accountNumber}} - {{today}} - <span [style.color]="color">{{percentage | percent:\'1.2-2\'}}</span> - {{i}} -->\n</div>\n'/*ion-inline-end:"C:\Users\Ladikn\Documents\Code\Ionic\SepTest\SepTest\src\components\account\account.html"*/
+        selector: 'account',template:/*ion-inline-start:"C:\Users\Ladikn\Documents\Code\Ionic\SepTest\SepTest\src\components\account\account.html"*/'<div class=\'list-item\' ion-item *ngIf=\'i < 3 || viewMore\'>\n  <span class=\'account\'>{{name}} - {{accountNumber}}</span>\n  <span class=\'balance\'>{{today | currency: \'USD\':true:\'3.2-2\'}} <br/>\n  <span [style.color]="color">{{positive}}{{percentage | percent:\'1.2-2\'}}</span></span>\n</div>\n'/*ion-inline-end:"C:\Users\Ladikn\Documents\Code\Ionic\SepTest\SepTest\src\components\account\account.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], AccountComponent);

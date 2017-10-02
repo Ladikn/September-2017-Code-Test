@@ -28,7 +28,7 @@ page-home {
 }
 
 .arrow {
-    color: #3939BB;
+    color: color($colors, primary); 
 }
 
 .card-header {
@@ -53,7 +53,7 @@ page-home {
 
 .viewButton .label{
     text-align: center;
-    color: #3939BB;
+    color: color($colors, primary); 
     font-size: 1.1em;
     height: 25px
 }

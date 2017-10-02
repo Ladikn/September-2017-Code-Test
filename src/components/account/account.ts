@@ -1,11 +1,5 @@
 import { Component, Input } from '@angular/core';
 
-/**
- * Generated class for the AccountComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
 @Component({
   selector: 'account',
   templateUrl: 'account.html'
@@ -19,9 +13,6 @@ export class AccountComponent {
     this.difference = this.today - this.yesterday; 
     this.percentage = 1 - (this.today / this.yesterday);
     this.setColor();
-    console.log(this.name);
-    // console.log(this.difference);
-    console.log(this.percentage);
   }
 
   @Input() name;
