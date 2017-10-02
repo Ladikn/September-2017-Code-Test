@@ -1,14 +1,26 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title text-center>
+            Accounts
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-card>
+
+        <ion-card-header>
+            <div class='topBar' id='leftButton' (click)='accountSort()'>Account <span class='arrow'>{{accountArrow}}</span></div>
+            <div class='topBar' id='rightButton' (click)='availableSort()'>
+                <span class='arrow'>{{cashArrow}}</span> Available Cash <br/>
+                <span class='grey'>Today's Change</span>
+            </div>
+        </ion-card-header>
+
+        <ion-list>
+            <account *ngFor="let d of data.accounts| accountOrder: sorter; let i = index" [i] = "i" [name]="d.name" [accountNumber]="d.accountNumber" [today]="d.today" [yesterday]="d.yesterday" [viewMore]="viewMore"></account>
+            <div ion-item class='viewButton' (click)='viewButton()'>{{viewText}}</div>
+        </ion-list>
+
+    </ion-card>
 </ion-content>

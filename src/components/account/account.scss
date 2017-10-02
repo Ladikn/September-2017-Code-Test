@@ -1,0 +1,25 @@
+.list-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.account {
+    color: rgba(46, 86, 157, 0.80);
+    font-weight: bold;
+    vertical-align: middle;
+    display: inline-block;
+    transform: translateY(10px);
+    margin-top: 5px;
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+
+.balance {
+    font-size: 1.3em;
+    float: right;
+    text-align: right;
+}
+
+// .percent {
+//     font-size: 1.3em;
+//     float: right;
+// }

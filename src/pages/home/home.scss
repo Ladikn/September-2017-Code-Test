@@ -1,3 +1,63 @@
 page-home {
+    background-color: lightblue;
+}
 
+.topBar {
+    width: 50%;
+    height: 70px;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(249, 249, 249, 0.98);
+    padding: 10px 10px 10px 10px;
+}
+
+.topBar:hover {
+    background-color: #E9E9E9
+}
+
+#leftButton {
+    left: 0;
+    line-height: 50px;
+}
+
+#rightButton {
+    right: 0;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.arrow {
+    color: #3939BB;
+}
+
+.card-header {
+    height: 50px;
+    padding: 0;
+    position: relative;
+}
+
+.card {
+    max-width: 700px;
+    min-width: 350px;
+    margin: auto;
+}
+
+.viewButton {
+    cursor: pointer;
+}
+
+.viewButton:hover {    
+    background-color: #E9E9E9
+}
+
+.viewButton .label{
+    text-align: center;
+    color: #3939BB;
+    font-size: 1.1em;
+    height: 25px
+}
+
+.grey {
+    color: rgba(0, 0, 0, 0.6);
 }
