@@ -33,7 +33,7 @@ export class AccountComponent {
       this.color = "#006600";
       this.positive = "+";
     } else if (this.percentage < 0) {
-      this.color = "#660000";
+      this.color = "#dd0000";
       this.positive = "";
     } else {
       this.color = "#444444"

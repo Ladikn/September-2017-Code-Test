@@ -61,7 +61,7 @@ var HomePage = (function () {
         this.data = dataProvider.getData();
         this.sorter = 1;
         this.viewMore = false;
-        this.viewText = 'Load More';
+        this.viewText = 'View More';
         this.accountArrow = '˄';
     }
     //Reminder for sorting: 1 and 2 are for by account (ascending and descending), 3 and 4 are for by available funds (ascending and descending)
@@ -90,10 +90,10 @@ var HomePage = (function () {
     HomePage.prototype.viewButton = function () {
         this.viewMore = !this.viewMore;
         if (this.viewMore) {
-            this.viewText = 'Load Less';
+            this.viewText = 'View Less';
         }
         else {
-            this.viewText = 'Load More';
+            this.viewText = 'View More';
         }
     };
     return HomePage;
@@ -102,10 +102,9 @@ HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
         selector: 'page-home',template:/*ion-inline-start:"C:\Users\Ladikn\Documents\Code\Ionic\SepTest\SepTest\src\pages\home\home.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title text-center>\n            Accounts\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-card>\n\n        <ion-card-header>\n            <div class=\'topBar\' id=\'leftButton\' (click)=\'accountSort()\'>Account <span class=\'arrow\'>{{accountArrow}}</span></div>\n            <div class=\'topBar\' id=\'rightButton\' (click)=\'availableSort()\'>\n                <span class=\'arrow\'>{{cashArrow}}</span> Available Cash <br/>\n                <span class=\'grey\'>Today\'s Change</span>\n            </div>\n        </ion-card-header>\n\n        <ion-list>\n            <account *ngFor="let d of data.accounts| accountOrder: sorter; let i = index" [i] = "i" [name]="d.name" [accountNumber]="d.accountNumber" [today]="d.today" [yesterday]="d.yesterday" [viewMore]="viewMore"></account>\n            <div ion-item class=\'viewButton\' (click)=\'viewButton()\'>{{viewText}}</div>\n        </ion-list>\n\n    </ion-card>\n</ion-content>'/*ion-inline-end:"C:\Users\Ladikn\Documents\Code\Ionic\SepTest\SepTest\src\pages\home\home.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__providers_data_data__["a" /* DataProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_data_data__["a" /* DataProvider */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_0__providers_data_data__["a" /* DataProvider */]])
 ], HomePage);
 
-var _a, _b;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -345,7 +344,7 @@ var AccountComponent = (function () {
             this.positive = "+";
         }
         else if (this.percentage < 0) {
-            this.color = "#660000";
+            this.color = "#dd0000";
             this.positive = "";
         }
         else {
@@ -381,7 +380,7 @@ __decorate([
 ], AccountComponent.prototype, "i", void 0);
 AccountComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'account',template:/*ion-inline-start:"C:\Users\Ladikn\Documents\Code\Ionic\SepTest\SepTest\src\components\account\account.html"*/'<div class=\'list-item\' ion-item *ngIf=\'i < 3 || viewMore\'>\n  <span class=\'account\'>{{name}} - {{accountNumber}}</span>\n  <span class=\'balance\'>{{today | currency: \'USD\':true:\'3.2-2\'}} <br/>\n  <span [style.color]="color">{{positive}}{{percentage | percent:\'1.2-2\'}}</span></span>\n</div>\n'/*ion-inline-end:"C:\Users\Ladikn\Documents\Code\Ionic\SepTest\SepTest\src\components\account\account.html"*/
+        selector: 'account',template:/*ion-inline-start:"C:\Users\Ladikn\Documents\Code\Ionic\SepTest\SepTest\src\components\account\account.html"*/'<div class=\'list-item\' ion-item *ngIf=\'i < 3 || viewMore\'>\n  <span class=\'account\'>{{name}} - {{accountNumber}}</span>\n  <span class=\'balance\'>{{today | currency: \'USD\':true:\'3.2-2\'}} <br/>\n  <span class=\'yesterday\' [style.color]="color">{{positive}}{{percentage | percent:\'1.2-2\'}} / {{yesterday | currency: \'USD\':true:\'3.2-2\'}}</span></span>\n</div>\n'/*ion-inline-end:"C:\Users\Ladikn\Documents\Code\Ionic\SepTest\SepTest\src\components\account\account.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], AccountComponent);

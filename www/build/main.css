@@ -19002,6 +19002,10 @@ ion-navbar.toolbar {
   text-align: right;
 }
 
+.yesterday {
+  font-size: 0.8em;
+}
+
 page-home {
   background-color: lightblue;
 }
