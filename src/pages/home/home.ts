@@ -12,7 +12,7 @@ export class HomePage {
     this.data = dataProvider.getData();
     this.sorter = 1;
     this.viewMore = false;
-    this.viewText = 'View More';
+    this.viewText = 'Load More';
     this.accountArrow = '˄';
   }
 
@@ -50,9 +50,9 @@ export class HomePage {
   viewButton() {
       this.viewMore = !this.viewMore;
       if (this.viewMore) {
-          this.viewText = 'View Less';
+          this.viewText = 'Load Less';
       } else {
-          this.viewText = 'View More';
+          this.viewText = 'Load More';
       }
   }
 }
