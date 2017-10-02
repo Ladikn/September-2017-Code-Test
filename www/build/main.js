@@ -61,7 +61,7 @@ var HomePage = (function () {
         this.data = dataProvider.getData();
         this.sorter = 1;
         this.viewMore = false;
-        this.viewText = 'View More';
+        this.viewText = 'Load More';
         this.accountArrow = '˄';
     }
     //Reminder for sorting: 1 and 2 are for by account (ascending and descending), 3 and 4 are for by available funds (ascending and descending)
@@ -90,10 +90,10 @@ var HomePage = (function () {
     HomePage.prototype.viewButton = function () {
         this.viewMore = !this.viewMore;
         if (this.viewMore) {
-            this.viewText = 'View Less';
+            this.viewText = 'Load Less';
         }
         else {
-            this.viewText = 'View More';
+            this.viewText = 'Load More';
         }
     };
     return HomePage;
