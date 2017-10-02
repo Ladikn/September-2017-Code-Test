@@ -30,10 +30,10 @@ export class AccountComponent {
 
   setColor() {
     if (this.percentage > 0) {
-      this.color = "#006600";
+      this.color = "#3eb460";
       this.positive = "+";
     } else if (this.percentage < 0) {
-      this.color = "#dd0000";
+      this.color = "#ff3b4b";
       this.positive = "";
     } else {
       this.color = "#444444"

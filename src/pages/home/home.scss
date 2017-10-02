@@ -1,5 +1,5 @@
-page-home {
-    background-color: lightblue;
+.card-header {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
 }
 
 .topBar {
@@ -8,13 +8,22 @@ page-home {
     margin: 0;
     position: absolute;
     cursor: pointer;
-    background-color: rgba(249, 249, 249, 0.98);
+    background-color: #f7f7f7;
     padding: 10px 10px 10px 10px;
 }
 
 .topBar:hover {
-    background-color: #E9E9E9
+    background-color: #E9E9E9;
 }
+
+.topBar.selected {
+    background-color: #EFEFEF;
+}
+
+.topBar.selected:hover {
+    background-color: #E9E9E9;
+}
+
 
 #leftButton {
     left: 0;

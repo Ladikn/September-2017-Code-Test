@@ -10,8 +10,8 @@
     <ion-card>
 
         <ion-card-header>
-            <div class='topBar' id='leftButton' (click)='accountSort()'>Account <span class='arrow'>{{accountArrow}}</span></div>
-            <div class='topBar' id='rightButton' (click)='availableSort()'>
+            <div class='topBar' id='leftButton' (click)='accountSort()' [ngClass]='sorter <= 2 ? "selected" : ""'>Account <span class='arrow'>{{accountArrow}}</span></div>
+            <div class='topBar' id='rightButton' (click)='availableSort()' [ngClass]='sorter >= 3 ? "selected" : ""'>
                 <span class='arrow'>{{cashArrow}}</span> Available Cash <br/>
                 <span class='grey'>Today's Change</span>
             </div>

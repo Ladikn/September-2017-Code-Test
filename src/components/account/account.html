@@ -1,5 +1,5 @@
 <div class='list-item' ion-item *ngIf='i < 3 || viewMore'>
   <span class='account'>{{name}} - {{accountNumber}}</span>
-  <span class='balance'>{{today | currency: 'USD':true:'3.2-2'}} <br/>
+  <span class='balance'>{{today | currency: 'USD':true:'3.2-2'}}<br/>
   <span class='yesterday' [style.color]="color">{{positive}}{{percentage | percent:'1.2-2'}} / {{yesterday | currency: 'USD':true:'3.2-2'}}</span></span>
 </div>
